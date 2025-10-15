@@ -1,0 +1,17 @@
+# Arquivo de configuração para sobrescrever configurações do docker-compose.yml
+# Este arquivo é automaticamente aplicado quando você executa docker-compose
+version: '3.8'
+
+services:
+  app:
+    # Configurações específicas para desenvolvimento
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - LOGGING_LEVEL_ROOT=INFO
+      - LOGGING_LEVEL_BR_COM_CONSULTDG=DEBUG
+    volumes:
+      # Mount para logs locais (opcional)
+      - ./logs:/app/logs
+    # Configuração para hot reload durante desenvolvimento (se necessário)
+    # volumes:
+    #   - ./src:/app/src:ro
