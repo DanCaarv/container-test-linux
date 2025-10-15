@@ -1,0 +1,20 @@
+# Ignorar arquivos desnecessários para o build do Docker
+target/
+.git/
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+
+# Arquivos do IDE
+.idea/
+.vscode/
+*.iml
+
+# Arquivos temporários
+*.tmp
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
