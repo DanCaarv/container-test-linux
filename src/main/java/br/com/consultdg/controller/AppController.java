@@ -16,9 +16,12 @@ public class AppController {
     @Value("${app.teste}")
     private String appTeste;
 
+    @Value("${app.consult}")
+    private String appConsult;
+
     @GetMapping("/variavel")
     public String getMethodName() {
-        return appName;
+        return appConsult;
     }
 
     @GetMapping("/teste")
